@@ -1,0 +1,172 @@
+***********GIT************
+1- Git status
+--shows status for files to be added, commit
+2- Config your name-
+git config --global user.name "Shubham Garg"
+git config --global user.email "xyz@gmail.com"
+
+git config --list
+-- finnd out  all possible configs
+
+git config --list --show-scope
+-- shows the scope of config to current user
+
+git config --global --edit
+-- to edit the configs available
+-- we can also provide aliases of pre-defined commands
+
+3- view users
+got config --global --list
+--It will list all users
+ 
+4- git add <file_name>
+--it will add file 
+OR
+git add <Directory_Name>
+
+5- GIT commit 
+OR
+Git commit -m "commit_message"
+-- Commits the info
+
+6- git restore --staged <file_name>
+ --Remove changes on file
+ OR
+ git restore --staged .
+ -- to restore/remove all changes in current dir
+ 
+7- git --add -p
+-- kind of a patch code
+-- create a staged commit_message
+
+8- git diff a/file_name b/file_name
+OR
+git diff <commit_hash1> <commit_hash2>
+OR
+GIT DIFF
+-- shows difference in tow files
+
+9- git log
+-- list all commit created
+AND
+git log 
+
+10- git show <hash commit value>
+-- help to study the information about that commit
+
+11- git show "hash commit value:<file_name>"
+-- putting in comma & using : to see only files involved here.
+
+12- git branch <branch_name>
+--create new branch
+
+13- git switch <branch_name>
+-- switch to new branch
+
+14- git switch -c <new_branch_name>
+-- create & switch to new branch
+
+15- git log --graph HEAD <branch_name>
+-- shows clear picture of branches and commits
+
+AND
+git log --graph HEAD --all
+-- shows all branches commit info
+
+16- git merge <branch_name>
+-- merge the changes
+
+17- git diff master...<branch_name>
+-- shows diff between master and other branch
+
+18- merge branch <branch_name> into master
+-- Merge data to master
+
+
+19- Initiate a GIT repository ie. create an empty repository
+git init
+
+20- check version
+git --version
+
+21- GIT clean
+-- to clean the untracked files
+
+22- GIT clone
+-- to clone the repository
+
+23- Creating a new branch:
+
+git branch <branch-name>
+git push -u <remote> <branch-name>
+
+24- Viewing branches:
+
+git branch or git branch --list
+
+25- Deleting a branch:
+
+git branch -d <branch-name>
+
+********** GITHUB ***********************
+
+Authentication on GITHUB
+a- HTTPS (recommended by GIT)
+b- SSH
+
+**GITHUB.COM**
+
+1- Generate token from developer Settings
+2- Create/join repositories by clicking on NEW
+keep it public/private
+
+3- git remote
+-- shows configured remotes
+
+4- git remote add origin <GITHUB path>
+GITHUB path = https://github.com/....<something>.git
+OR
+GITHUB path = https://<@token>github.com/....<something>.git
+
+5- git push -u origin master
+--push changes in master branch
+
+6- git pull
+-- shows changes to be pulled into main branch
+-- basically a request to merge your changes with master/other branch
+
+type off pull request-
+a- Branch based, as mentioned in point 6 above
+b- Fork based- basically a copy of repositories under a different account
+
+7- from browser, we can select reviewer, make pull request, review and approve changes.
+
+8- Tags
+git tag-- shows all tags created
+-
+a- lightweight tags -- basically a simple version on commit
+git tag <tag_name> <last commit created>
+exa- got tag v1.0 <some_commit_has>
+
+b- annotated tags
+git tag -a v1.1
+-a stands for annotated
+-- The tag v1.1.0 has information like the tagger, the date and the message. This makes it an annotated tag. The tag v1.0.0 is a simple reference and is an example of a lightweight tag.
+
+9- .gitignore
+-- can be used to ignore some files
+
+command-
+vi .gitignore
+-- using vi editor
+
+emacsclinet - t .gitignore
+-- using emac client editor
+
+git add -A
+-- easy way to ingore files with .gitignore
+
+man gitignore
+-- read manual
+
+after opening this file, please type all files, directories which needs to be removed from tracking
